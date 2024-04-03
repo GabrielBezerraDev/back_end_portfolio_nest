@@ -17,6 +17,18 @@ export class PokemonController {
     return this.pokemonService.findAll();
   }
 
+  @Get("type-pokemon")
+  findAllTypePokemon() {
+    return this.pokemonService.findAllTypePokemon();
+  }
+
+  @Get("type-pokemon/:id")
+  findOneTypePokemon(@Param('id') id:string) {
+    return this.pokemonService.findOneTypePokemon(id);
+  }
+
+
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.pokemonService.findOne(+id);

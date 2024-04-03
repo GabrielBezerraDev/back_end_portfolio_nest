@@ -20,6 +20,17 @@ export class PokemonService {
     return this.prisma.pokemon.findMany();
   }
 
+  findAllTypePokemon() {
+    return this.prisma.typePokemon.findMany();
+  }
+
+  findOneTypePokemon(id:string) {
+    return this.prisma.typePokemon.findMany({
+      where: {tittle: id}
+    });
+  }
+
+
   findOne(id: number) {
     return `This action returns a #${id} pokemon`;
   }

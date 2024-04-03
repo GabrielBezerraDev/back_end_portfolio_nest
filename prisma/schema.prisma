@@ -14,6 +14,17 @@ model Pokemon{
   id Int @id @default(autoincrement())
   name String @unique
   typePokemon String
-  lifePokemon Float 
+  lifePokemon Float
+}
 
+model CardGame{
+  username String @id @unique
+  score Float @default(0) 
+  rank Float @default(0)
+}
+
+model TypePokemon{
+  tittle String @id
+  iconType String
+  iconColor String
 }
